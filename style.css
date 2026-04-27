@@ -1,0 +1,207 @@
+/* Estilo Geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #ee4242;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(228, 255, 75);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* Cabeçario */
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(219, 217, 217, 0.2);
+}
+
+header a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color:rgb(151, 252, 84);
+    transform: scale(1.07);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 60px;
+}
+
+/* BOTÃO CONTATO */
+.btn-contato button:hover{
+    box-shadow: 0px 0px 8px rgba(244, 247, 89, 0.74);
+    transform: scale(1.07);
+}
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color:white;
+    font-size: 34px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: white;
+    margin: 40px 0;
+}
+
+.btn-trimestre {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.btn-trimestre a {
+    margin: 0 10px;
+}
+
+.btn-trimestre button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(252, 255, 94);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-trimestre button:hover {
+    box-shadow: 0px 0px 8px rgba(229, 255, 84, 0.74);
+    transform: scale(1.07);
+}
+
+h2 {
+    color: white;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.txt-site {
+    color:rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    border: 0;
+}
+
+.linha {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.linha p {
+    margin: 0;
+    font-size: 14px; 
+}
+
+/* NAVBAR CENTRALIZADA - CORRIGIDA */
+.navbar {
+    display: flex !important;
+    align-items: center !important;
+    background-color: #b30000 !important;
+    padding: 10px 20px !important;
+    position: relative !important;
+}
+
+.navbar .left {
+    position: absolute !important;
+    left: 20px !important;
+}
+
+.navbar .center {
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 30px !important;
+}
+
+.navbar .right {
+    position: absolute !important;
+    right: 20px !important;
+}
+
+.navbar img {
+    border-radius: 50% !important;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.navbar a {
+    color: white !important;
+    text-decoration: none !important;
+    margin: 0 15px !important;
+    font-weight: bold !important;
+}
+
+.card {
+    background-color: #cc0000;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    align-items:center;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    align-items:center;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.5;
+    align-items:center;
+}

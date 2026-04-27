@@ -1,0 +1,435 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Vídeo Aulas - José Braga</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+        
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #34495e;
+            padding: 20px 40px;
+        }
+        
+        .navbar .left {
+            flex: 1;
+        }
+        
+        .navbar .center {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .navbar .right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .navbar img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        
+        .navbar a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .navbar a:hover {
+            color: #f39c12;
+            transform: scale(1.05);
+        }
+        
+        .btn-contato {
+            background-color: #f39c12;
+            color: #2c3e50;
+            padding: 10px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border: 0;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: .2s;
+            text-decoration: none;
+        }
+        
+        .btn-contato:hover {
+            box-shadow: 0px 0px 8px rgba(243, 156, 18, 0.74);
+            transform: scale(1.07);
+        }
+        
+        .txt-topo-site {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .txt-topo-site h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #34495e;
+        }
+        
+        .txt-topo-site p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #7f8c8d;
+        }
+        
+        .videos-section {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .videos-section h2 {
+            font-size: 1.8em;
+            color: #34495e;
+            margin-bottom: 30px;
+        }
+        
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .video-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-item iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+        }
+        
+        .video-item.tiktok iframe {
+            height: 500px;
+        }
+        
+        .video-item .caption {
+            padding: 20px;
+            text-align: left;
+        }
+        
+        .video-item .caption h3 {
+            font-size: 1.2em;
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+        
+        .video-item .caption p {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        
+        .video-item .caption .tag {
+            display: inline-block;
+            background-color: #f39c12;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        
+        .contact {
+            text-align: center;
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 30px;
+            margin-top: 20px;
+        }
+        
+        .contact h2 {
+            color: #f39c12;
+        }
+        
+        .contact a {
+            color: #f39c12;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        
+        .contact a:hover {
+            color: #ecf0f1;
+        }
+        
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .navbar .left,
+            .navbar .center,
+            .navbar .right {
+                flex: none;
+                width: 100%;
+                justify-content: center;
+                margin: 5px 0;
+            }
+            
+            .navbar .center {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .txt-topo-site h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="left">
+            <img src="images/logo.jpg" alt="Logo do Portfolio">
+        </div>
+        <div class="center">
+            <a href="galearia.html">Galearia</a>
+            <a href="curriculo.html">Currículo</a>
+            <a href="index.html">Início</a>
+        </div>
+        <div class="right">
+            <a class="btn-contato" href="https://wa.me/5512992283186?text=Gostaria%20de%20agendar%20uma%20aula">Contato</a>
+        </div>
+    </div>
+    
+    <div class="txt-topo-site">
+        <h1>Vídeo Aulas - José Braga</h1>
+        <p>Aprenda acordeão e teclado com aulas práticas e didáticas. Assista aos vídeos e desenvolva suas habilidades musicais!</p>
+    </div>
+    
+    <div class="videos-section">
+        <h2>Aulas Disponíveis</h2>
+        <div class="videos-grid">
+            
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/qpfvvVu69gE" allowfullscreen></iframe>
+                <div class="caption">
+                    <h3>Introdução</h3>
+                    <p>Minha Biografia Músical!</p>
+                    <span class="tag">Introdução</span>
+                </div>
+            </div>
+            
+            <!-- Vídeo 2 - TikTok -->
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7414140807055232262" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Primeira Aula: Postura Correta</h3>
+                    <p>Vídeo curto mostrando a postura ideal para tocar acordeão sem cansar.</p>
+                    <span class="tag">Dica Rápida</span>
+                </div>
+            </div>
+            
+            <!-- Vídeo 3 - YouTube -->
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/7414136406148173061" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Segunda Aula</h3>
+                    <p>Baixos-nota do sol e fa</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+            
+            <!-- Vídeo 4 - TikTok -->
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7412284942727564549" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Terceira Aula</h3>
+                    <p>Teclado do Acordeon, Iniciantes do zero</p>
+                    <span class="tag">Dica Rápida</span>
+                </div>
+            </div>
+            
+            <!-- Vídeo 3 -->
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7415250307485224198" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Quarta Aula</h3>
+                    <p>Quarta aula introdutória ao Acordeon.</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+            
+            <!-- Vídeo 4 -->
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7415252200588332294" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Quinta Aula</h3>
+                    <p>Contagem dos tempos.</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+            
+            <!-- Vídeo 5 -->
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7416354943008787717" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Sexta Aula</h3>
+                    <p>Mãos Juntas.</p>
+                    <span class="tag">Dica Rápida</span>
+                </div>
+            </div>
+
+            <!-- Vídeo 6 -->
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7416408348670708997" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Sétima Aula</h3>
+                    <p>Revisão das últimas aulas.</p>
+                    <span class="tag">Dica Rápida</span>
+                </div>
+            </div>
+            
+            <!-- Vídeo 7 -->
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7416716947938626821" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Oitava Aula</h3>
+                    <p>Compasso de quatro tempos.</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+            
+            <!-- Vídeo 8 -->
+            <div class="video-item tiktok">
+                <iframe src="https://tiktok.com/embed/v2/7416720934179982597" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Nona Aula</h3>
+                    <p>Compasso de dois tempos.</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+            
+            <!-- Vídeo 9 -->
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7416727201522961670" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Décima Aula</h3>
+                    <p>Compasso de três tempos.</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+            
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7412423714656079110" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Primeiro Exercício de Técnica</h3>
+                    <p>Exercícios para iniciantes</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+
+
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7412425588142607621" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Segundo Exercício de Técnica</h3>
+                    <p>Exercícios para iniciantes</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+
+
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7412425927243615493" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Terceiro Exercício de Técnica</h3>
+                    <p>Exercícios para iniciantes</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7412426185822522630" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Quarto Exercício de Técnica</h3>
+                    <p>Exercícios para iniciantes</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7412426398712728838" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Quinto Exercício de Técnica</h3>
+                    <p>Exercícios para iniciantes</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7412427265792855301" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Sexto Exercício de Técnica</h3>
+                    <p>Exercícios para iniciantes</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+
+            <div class="video-item tiktok">
+                <iframe src="https://www.tiktok.com/embed/v2/7412427421451914501" allowfullscreen scrolling="no"></iframe>
+                <div class="caption">
+                    <h3>Sétimo Exercício de Técnica</h3>
+                    <p>Exercícios para iniciantes</p>
+                    <span class="tag">Iniciante</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+<div class="contact">
+        <h2>Entre em Contato</h2>
+        <p>Interessado em aulas ou oficinas? Vamos conversar!</p>
+        <a href="mailto:braga.sanfona@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/5512992283186"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/Acordeon120"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@bragaaulasdeacordeon"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@braga.sanfonagmail.com"><i class="fab fa-tiktok"></i></a>
+        <br><br>
+        <a class="btn-contato" href="https://wa.me/5512992283186?text=Gostaria%20de%20agendar%20uma%20aula">Agende uma Aula</a>
+    </div>
+</body>
+</html>

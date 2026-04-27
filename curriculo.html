@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Currículo - José A. D. Braga</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        /* NAVBAR CENTRALIZADA */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #34495e;
+            padding: 10px 20px;
+        }
+        .navbar .left {
+            flex: 1;
+        }
+        .navbar .center {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .navbar .right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .navbar img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        .navbar a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #f39c12;
+        }
+        .btn-contato {
+            background-color: #f39c12;
+            color: #2c3e50;
+            padding: 10px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border: 0;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .btn-contato:hover {
+            box-shadow: 0px 0px 8px rgba(243, 156, 18, 0.74);
+            transform: scale(1.07);
+        }
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid #f39c12;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        .section {
+            background-color: #ffffff;
+            padding: 30px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            font-size: 1.8em;
+            color: #34495e;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .section li::before {
+            content: "♪";
+            color: #f39c12;
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background-color: #ecf0f1;
+            color: #34495e;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .contact {
+            text-align: center;
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 30px;
+            margin-top: 20px;
+        }
+        .contact h2 {
+            color: #f39c12;
+        }
+        .contact a {
+            color: #f39c12;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        .contact a:hover {
+            color: #ecf0f1;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .navbar .left,
+            .navbar .center,
+            .navbar .right {
+                flex: none;
+                width: 100%;
+                justify-content: center;
+                margin: 5px 0;
+            }
+            
+            .navbar .center {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .txt-topo-site h1 {
+                font-size: 1.5em;
+            }
+            
+            .modal-content img {
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="left">
+            <img src="images/logo.jpg" alt="Logo do Portfolio">
+        </div>
+        <div class="center">
+            <a href="galearia.html">Galearia</a>
+            <a href="index.html">Ínicio</a>
+            <a href="aulas.html">Vídeos Aulas</a>
+        </div>
+        <div class="right">
+            <a class="btn-contato" href="https://wa.me/5512992283186?text=Gostaria%20de%20agendar%20uma%20aula">Contato</a>
+        </div>
+    </div>
+
+    <div class="header">
+        <img src="images/Linguagens.jpeg" alt="Foto de José A. D. Braga">
+        <h1>JOSÉ A. D. BRAGA</h1>
+        <p>Professor de Acordeão e Teclado | Especialista em Ensino Musical</p>
+    </div>
+
+    <div class="section">
+        <h2>Sobre Mim</h2>
+        <p>Sou José A. D. Braga, professor de acordeão e teclado com quase 40 anos de experiência em ensinar música. Minha paixão pela música me levou a atuar como músico em diversos grupos e projetos, além de dedicar minha carreira ao ensino. Ofereço oficinas de acordeão para iniciantes e amadores, focando no aprendizado através de partituras musicais e técnicas essenciais.</p>
+        <p><strong>Projeto de Trabalho:</strong> Oficinas de Acordeão. Curso para aprendizado de iniciantes ou músicos amadores que queiram aprender acordeão e suas técnicas. Lendo e tocando pela partitura musical.</p>
+    </div>
+
+    <div class="section">
+        <h2>Formação Acadêmica</h2>
+        <ul>
+            <li><strong>Diplomado em Acordeão - Conservatório de Música João Ghighinone</strong> (Diretor: Maestro italiano Carlo Cagnani, Paranavaí-PR)<br>Duração: Acordeão (6 anos), Teoria Musical (3 anos), Solfejo e Divisão (3 anos), Folclore (1 ano).</li>
+            <li><strong>Formado em Órgão Eletrônico - Minami (SP)</strong></li>
+            <li><strong>Curso C.L.M (Órgão Eletrônico) - Limeira (SP)</strong></li>
+            <li><strong>Curso de Teclado Yamaha - São José dos Campos (SP)</strong></li>
+            <li><strong>Piano Erudito (5 anos) - Paranavaí (PR)</strong></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Experiência Profissional</h2>
+        <ul>
+            <li><strong>Professor de Acordeão e Teclado</strong> (Atividade principal há quase 40 anos)<br>Ministro aulas individuais e oficinas, ensinando técnicas de acordeão, teclado e leitura de partituras para alunos de todos os níveis.</li>
+            <li><strong>Acordeonista - Grupo de Choro 'Pixinghinha'</strong> (Atualmente)<br>Participação ativa em apresentações e gravações.</li>
+            <li><strong>Acordeonista - Grupo Gralha Azul (Paranavaí)</strong></li>
+            <li><strong>Acordeonista - Grupo Rio Acima (São José dos Campos)</strong></li>
+            <li><strong>Sanfoneiro - Primeiro Salão de Forró do Vale do Paraíba (Forró do Reizinho)</strong></li>
+            <li><strong>Integrante - Grupo "Piraquara" (Fundação Cultural de São José dos Campos)</strong></li>
+            <li><strong>Músico - Hotel Fazenda Mazzaropi (Taubaté-SP)</strong> (Atualmente)</li>
+            <li><strong>Músico e Arranjador em Estúdios de Gravação</strong><br>Trabalho com gravações de CDs para diversos artistas e grupos.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Discografia</h2>
+        <ul>
+            <li><strong>CDs Gravados:</strong> Gralha Azul, Piraquara, Rio Acima, Beto Jaguary, Grupo de Choro Pixinghinha, Duplas Sertanejas, Conjuntos de Forró, Música Caipira.</li>
+            <li><strong>Gravação Própria:</strong> 3 CDs.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Habilidades</h2>
+        <div class="skills">
+            <span class="skill">Acordeão (Técnicas Avançadas)</span>
+            <span class="skill">Teclado e Órgão Eletrônico</span>
+            <span class="skill">Piano Erudito</span>
+            <span class="skill">Teoria Musical</span>
+            <span class="skill">Solfejo e Divisão</span>
+            <span class="skill">Folclore Musical</span>
+            <span class="skill">Arranjos e Produção</span>
+            <span class="skill">Ensino Musical</span>
+            <span class="skill">Leitura de Partituras</span>
+            <span class="skill">Música Brasileira (Choro, Forró, Sertanejo)</span>
+        </div>
+    </div>
+
+    <div class="contact">
+        <h2>Entre em Contato</h2>
+        <p>Interessado em aulas ou oficinas? Vamos conversar!</p>
+        <a href="mailto:braga.sanfona@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/5512992283186"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/Acordeon120"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@bragaaulasdeacordeon"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@braga.sanfonagmail.com"><i class="fab fa-tiktok"></i></a>
+        <br><br>
+        <a class="btn-contato" href="https://wa.me/5512992283186?text=Gostaria%20de%20agendar%20uma%20aula">Agende uma Aula</a>
+    </div>
+</body>
+</html>
